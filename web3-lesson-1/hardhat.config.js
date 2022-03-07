@@ -32,6 +32,11 @@ module.exports = {
             url: "http://127.0.0.1:8545",
             accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
         },
+        // for testnet
+        optimism_kovan: {
+            url: "https://kovan.optimism.io",
+            accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        },
     },
     gasReporter: {
         enabled: process.env.REPORT_GAS !== undefined,

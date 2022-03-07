@@ -53,21 +53,21 @@ async function main() {
         .on('confirmation', function(confirmationNumber, receipt) {
             console.log("confirmation confirmationNumber=", confirmationNumber, " receipt=", receipt);
 
-            token_contract.methods.balanceOf(myAddress).call(function(err, res) {
-                if (err) {
-                    console.log("An error occured", err)
-                    return
-                }
-                console.log("After Transfer From Account  balance is: ", res)
-            });
+            // token_contract.methods.balanceOf(myAddress).call(function(err, res) {
+            //     if (err) {
+            //         console.log("An error occured", err)
+            //         return
+            //     }
+            //     console.log("After Transfer From Account  balance is: ", res)
+            // });
 
-            token_contract.methods.balanceOf(DEST_WALLET).call(function(err, res) {
-                if (err) {
-                    console.log("An error occured", err)
-                    return
-                }
-                console.log("After Transfer To Account  balance is: ", res)
-            });
+            // token_contract.methods.balanceOf(DEST_WALLET).call(function(err, res) {
+            //     if (err) {
+            //         console.log("An error occured", err)
+            //         return
+            //     }
+            //     console.log("After Transfer To Account  balance is: ", res)
+            // });
 
         })
         .on('receipt', function(receipt) {
